@@ -5,21 +5,21 @@ using static System.Console;
 
 namespace CarFactory
 {
-    public class CarDataModel
+    public class CarDataModel : IDataModel
     {
-        static CarDataModel()
+        public CarDataModel()
         {
             Car.CarList = new List<Car>();
             CreateCars();
             CreateCars();
             CreateCars();
         }
-        public static void CreateCars()
+        public void CreateCars()
         {
             Car carObject = new Car(Colors.Blue, "Audi A4");
             Car.CarList.Add(carObject);
         }
-        public static void DisplayCars()
+        public void DisplayCars()
         {
             Clear();
             WriteLine("{0,24}", arg0: "Cars In Batch");
@@ -36,7 +36,7 @@ namespace CarFactory
             }
 
         }
-        public static void UpdateCars()
+        public void UpdateCars()
         {
             int carId = ChooseCarId();
             int choice;
@@ -75,8 +75,7 @@ namespace CarFactory
 
 
         }
-
-        public static int ChooseCarId()
+        public int ChooseCarId()
         {
             int carId = -1;
             do
@@ -96,8 +95,7 @@ namespace CarFactory
 
             return carId;
         }
-
-        public static Colors ChooseColor()
+        public Colors ChooseColor()
         {
             int choice;
             Clear();
@@ -113,15 +111,13 @@ namespace CarFactory
 
             return (Colors)Enum.ToObject(typeof(Colors), choice - 1);
         }
-
-        public static string? ChooseModel()
+        public string? ChooseModel()
         {
             Clear();
             WriteLine("Please Enter Your Model Name : ");
             return ReadLine();
         }
-
-        public static void DeleteCars()
+        public void DeleteCars()
         {
             int carId = ChooseCarId();
             Clear();
@@ -145,5 +141,6 @@ namespace CarFactory
                 ForegroundColor = ConsoleColor.White;
             }
         }
+
     }
 }

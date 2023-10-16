@@ -5,6 +5,13 @@ namespace CarFactory
     class Application
     {
         public string[] MenuList = new string[] { "Create Car", "Update Car", "Display Cars", "Delete Car", "Exit" };
+
+        private CarDataModel dataModel;
+
+        public Application()
+        {
+            dataModel = new CarDataModel();
+        }
         public void Menu()
         {
             int choice;
@@ -44,18 +51,18 @@ namespace CarFactory
             switch (choice)
             {
                 case 1:
-                    CarDataModel.CreateCars();
+                    dataModel.CreateCars();
                     break;
                 case 2:
-                    CarDataModel.UpdateCars();
+                    dataModel.UpdateCars();
                     break;
                 case 3:
-                    CarDataModel.DisplayCars();
+                    dataModel.DisplayCars();
                     Write("Enter To Continue");
                     ReadLine();
                     break;
                 case 4:
-                    CarDataModel.DeleteCars();
+                    dataModel.DeleteCars();
                     Write("Enter To Continue");
                     ReadLine();
                     break;
