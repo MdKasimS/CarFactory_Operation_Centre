@@ -1,5 +1,6 @@
 using System.Drawing;
 using System.Dynamic;
+using System.Threading.Tasks.Dataflow;
 using static System.Console;
 
 namespace CarFactory
@@ -38,7 +39,41 @@ namespace CarFactory
         public static void UpdateCars()
         {
             int carId = ChooseCarId();
-            Car.CarList[carId].BodyPaint = ChooseColor();
+            int choice;
+            do
+            {
+                Clear();
+                WriteLine("1. Update Color");
+                WriteLine("2. Update Model");
+                WriteLine("3. Exit");
+
+                Write("Enter Your Choice : ");
+                int.TryParse(ReadLine(), out choice);
+
+                switch (choice)
+                {
+                    case 1:
+                        Car.CarList[carId].BodyPaint = ChooseColor();
+                        break;
+
+                    case 2:
+                        Car.CarList[carId].Model = ChooseModel();
+                        break;
+
+                    case 3:
+                        break;
+
+                    default:
+                        Clear();
+                        WriteLine("Please Enter Correct Choice. Press Enter To Continue");
+                        break;
+
+                }
+
+            } while (choice != 3);
+
+
+
         }
 
         public static int ChooseCarId()
