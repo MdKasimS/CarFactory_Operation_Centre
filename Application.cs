@@ -10,7 +10,9 @@ namespace CarFactory
 
         public Application()
         {
+            Car.CarList = new List<Car>();
             dataModel = new CarDataModel();
+            Menu();
         }
         public void Menu()
         {
@@ -51,18 +53,18 @@ namespace CarFactory
             switch (choice)
             {
                 case 1:
-                    dataModel.CreateCars();
+                    dataModel.CreateVehicle();
                     break;
                 case 2:
-                    dataModel.UpdateCars();
+                    dataModel.UpdateVehicle();
                     break;
                 case 3:
-                    dataModel.DisplayCars();
+                    dataModel.DisplayVehicle();
                     Write("Enter To Continue");
                     ReadLine();
                     break;
                 case 4:
-                    dataModel.DeleteCars();
+                    dataModel.DeleteVehicle();
                     Write("Enter To Continue");
                     ReadLine();
                     break;
@@ -80,7 +82,7 @@ namespace CarFactory
         public static void Run()
         {
             Application app = new Application();
-            app.Menu();
+            // app.Menu();
         }
     }
 }

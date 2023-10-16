@@ -9,17 +9,17 @@ namespace CarFactory
     {
         public CarDataModel()
         {
-            Car.CarList = new List<Car>();
-            CreateCars();
-            CreateCars();
-            CreateCars();
+            // Car.CarList = new List<Car>();
+            CreateVehicle();
+            CreateVehicle();
+            CreateVehicle();
         }
-        public void CreateCars()
+        public void CreateVehicle()
         {
             Car carObject = new Car(Colors.Blue, "Audi A4");
             Car.CarList.Add(carObject);
         }
-        public void DisplayCars()
+        public void DisplayVehicle()
         {
             Clear();
             WriteLine("{0,24}", arg0: "Cars In Batch");
@@ -36,9 +36,9 @@ namespace CarFactory
             }
 
         }
-        public void UpdateCars()
+        public void UpdateVehicle()
         {
-            int carId = ChooseCarId();
+            int carId = ChooseVehicleId();
             int choice;
             do
             {
@@ -72,16 +72,14 @@ namespace CarFactory
 
             } while (choice != 3);
 
-
-
         }
-        public int ChooseCarId()
+        public int ChooseVehicleId()
         {
             int carId = -1;
             do
             {
                 Clear();
-                DisplayCars();
+                DisplayVehicle();
                 Write("Enter Car Id: ");
                 int.TryParse(ReadLine(), out carId);
 
@@ -92,8 +90,8 @@ namespace CarFactory
                     ReadLine();
                 }
             } while (carId == -1 || carId > Car.CarList.Count);
-
-            return carId;
+            int index = Car.CarList.FindIndex(car => car.Id == carId);
+            return index;
         }
         public Colors ChooseColor()
         {
@@ -102,13 +100,11 @@ namespace CarFactory
             WriteLine("Avaialable Colors In Paint Shop: ");
             for (int i = 0; i < Enum.GetValues(typeof(Colors)).Length; ++i)
             {
-
                 WriteLine($"{i + 1}. {(Colors)Enum.ToObject(typeof(Colors), i)}");
             }
 
             Write("Enter Your Choice : ");
             int.TryParse(ReadLine(), out choice);
-
             return (Colors)Enum.ToObject(typeof(Colors), choice - 1);
         }
         public string? ChooseModel()
@@ -117,9 +113,9 @@ namespace CarFactory
             WriteLine("Please Enter Your Model Name : ");
             return ReadLine();
         }
-        public void DeleteCars()
+        public void DeleteVehicle()
         {
-            int carId = ChooseCarId();
+            int carId = ChooseVehicleId();
             Clear();
             Write($"To Delete {Car.CarList[carId]} Type Model Name : ");
             string modelName = ReadLine();

@@ -2,13 +2,13 @@ namespace CarFactory
 {
     public interface IDataModel
     {
-        public void CreateCars();
-        void DisplayCars();
-        void UpdateCars();
-        int ChooseCarId();
+        public void CreateVehicle();
+        void DisplayVehicle();
+        void UpdateVehicle();
+        int ChooseVehicleId();
         Colors ChooseColor();
         string? ChooseModel();
-        void DeleteCars();
+        void DeleteVehicle();
 
     }
 }
