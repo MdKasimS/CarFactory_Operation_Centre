@@ -1,0 +1,15 @@
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\CarFactory.csproj.AssemblyReference.cache
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\CarFactory.GeneratedMSBuildEditorConfig.editorconfig
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\CarFactory.AssemblyInfoInputs.cache
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\CarFactory.AssemblyInfo.cs
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\CarFactory.csproj.CoreCompileInputs.cache
+E:\2021-23\VisualStudioCode\CarFactory\bin\Debug\net7.0\CarFactory.exe
+E:\2021-23\VisualStudioCode\CarFactory\bin\Debug\net7.0\CarFactory.deps.json
+E:\2021-23\VisualStudioCode\CarFactory\bin\Debug\net7.0\CarFactory.runtimeconfig.json
+E:\2021-23\VisualStudioCode\CarFactory\bin\Debug\net7.0\CarFactory.dll
+E:\2021-23\VisualStudioCode\CarFactory\bin\Debug\net7.0\CarFactory.pdb
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\CarFactory.dll
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\refint\CarFactory.dll
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\CarFactory.pdb
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\CarFactory.genruntimeconfig.cache
+E:\2021-23\VisualStudioCode\CarFactory\obj\Debug\net7.0\ref\CarFactory.dll
