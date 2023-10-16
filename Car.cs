@@ -30,8 +30,5 @@ namespace CarFactory
             Model = model;
             Id = CarList.Count;
         }
-
-
-
     }
 }
